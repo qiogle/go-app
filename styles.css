@@ -50,8 +50,9 @@ button {
 }
 #controls {
 	position: relative;
-	text-align: center;
-}
+margin: 0 auto;
+width: 300px;
+text-align: center}
 
 button.w {
 	border-radius: 50%;
@@ -77,8 +78,23 @@ button.erase:active {
 	background-color: #FFB2B2
 }
 
+button#shortcuts {
+	min-width: 80px;
+	height: 30px;
+}
+
+#shortcut-info {
+	display: none;
+	text-align: left;
+}
+
+ul {
+	list-style-type: none;	
+	margin-top: -30px;
+	margin-left: 15px;
+}
 /*debugging*/
-#/*main {
+/*main {
 	border: 1px red solid;
 }
 

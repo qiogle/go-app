@@ -4,7 +4,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<script type="text/javascript" src="more.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.6.1/mousetrap.min.js"></script>
 
 </head>
 <body>
@@ -19,12 +19,22 @@
 	<div id="controls">
 		Lock color
 		<form>
-			<input type="radio" name="forced-color" checked value="off" onclick="lock('o')"> Off
-			<input type="radio" name="forced-color" value="white" onclick="lock('w')"> White
-			<input type="radio" name="forced-color" value="black" onclick="lock('b')"> Black
+			<input type="radio" name="forced-color" id="radio-off" checked value="off" onclick="lock('o')"> Off
+			<input type="radio" name="forced-color" id="radio-white" value="white" onclick="lock('w')"> White
+			<input type="radio" name="forced-color" id="radio-black" value="black" onclick="lock('b')"> Black
 		</form>
-		<input type="checkbox" unchecked onchange="eraseToggle()"> Erase
+		Erase <input type="checkbox" id="erase-toggle" unchecked onchange="eraseToggle()">
+		<p><button id="shortcuts">Shortcuts</button></p>
+		<div id="shortcut-info">
+			<ul>
+				<li> W &rarr; Color lock - White </li>
+				<li> B &rarr; Color lock - Black </li>
+				<li> C &rarr; Color lock - Clear </li>
+				<li> E &rarr; Toggle erase</li>
+			</ul>
+		</div>
 	</div>
+
 	<!-- scripts that depend on html loading -->
 	<script type="text/javascript" src="main.js"></script>
 

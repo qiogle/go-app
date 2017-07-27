@@ -1,6 +1,11 @@
 $( document ).ready(function() {
 	drawGridlines();
 	drawBoard();
+	$("#shortcuts").mouseover(function() {
+		$("#shortcut-info").show();
+	}).mouseout(function() {
+		$("#shortcut-info").hide();
+	});
 });
 
 
@@ -119,6 +124,7 @@ function move(el) {
 	console.log(priorState)
 	console.log(el)
 	console.log(lockState)
+	console.log(erase)
 	// switches color in anticipation of next move
 };
 
@@ -137,3 +143,16 @@ function changeColor() {
 		color = Constants.Colors.White;
 	}
 }
+
+function selectRadioButton(btn) {
+	document.getElementById("radio-white").checked = true;
+}
+
+Mousetrap.bind('w', function() {document.getElementById("radio-white").checked = true;
+});
+Mousetrap.bind('b', function() {document.getElementById("radio-black").checked = true;
+});
+Mousetrap.bind('c', function() {document.getElementById("radio-off").checked = true;
+});
+Mousetrap.bind('e', function() {console.log('test'); var current = $("#erase-toggle").prop("checked"); document.getElementById("erase-toggle").checked = !current;    $("#erase-toggle").trigger('change');
+});
