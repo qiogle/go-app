@@ -5,10 +5,10 @@ body {
 button {
 	background-color: #e7e7e7;
 	text-align: center;
-	margin-right: 51px;
-	margin-bottom: 52px;
-	width: 30px;
-	height: 30px;
+	margin-right: 37px;
+	margin-bottom: 36px;
+	width: 45px;
+	height: 45px;
 	outline: none;
 }
 
@@ -24,13 +24,33 @@ button {
 	display: inline-block;
 }
 
-#board, #gridlines {
+#board-container, #gridlines {
 	position: absolute;
+	top: 10;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#main {
+	position: relative;
+	height: 700px;
+}
+
+#board-container {
+	margin-top: 0px;
+		width: 900px;
+
 }
 
 #board {
-	margin-top: 0px;
-	margin-left: -12px;
+	position: relative;
+	text-align: center;
+	top: -15px;
+	left: 15px;
+}
+#controls {
+	position: relative;
+	text-align: center;
 }
 
 button.w {
@@ -46,15 +66,33 @@ button.b {
 }
 
 button.none {
+	border-radius: 50%;
 	border: transparent;
 	background-color: transparent;
 	outline: none;
 }
 
-#controls {
-	margin-left: 800px;
-}
 
 button.erase:active {
 	background-color: #FFB2B2
 }
+
+/*debugging*/
+#/*main {
+	border: 1px red solid;
+}
+
+#board-container {
+	border: 1px solid red;
+}
+
+
+button {
+	border: 1px solid red;
+}
+
+button.none {
+	border: black;
+	background-color: green;
+}
+*/
