@@ -1,3 +1,3 @@
 # go-app
 
-Create positions for the game Go. 
+Create positions and simulate moves for the game Go. 
