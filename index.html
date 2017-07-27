@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Go Simulator</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript" src="more.js"></script>
+
+</head>
+<body>
+	<div id='main'>
+		<p id="gridlines"></p>
+		<p id="board">dkjf</p>
+	</div>
+
+	<div id="controls">
+		Lock color
+		<form>
+			<input type="radio" name="forced-color" checked value="off" onclick="lock('o')"> Off
+			<input type="radio" name="forced-color" value="white" onclick="lock('w')"> White
+			<input type="radio" name="forced-color" value="black" onclick="lock('b')"> Black
+		</form>
+		<input type="checkbox" unchecked onchange="eraseToggle()"> Erase
+	</div>
+	<!-- scripts that depend on html loading -->
+	<script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>
+

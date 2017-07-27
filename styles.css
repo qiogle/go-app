@@ -1,0 +1,60 @@
+body {
+	background-color: #FAFAFA;
+}
+
+button {
+	background-color: #e7e7e7;
+	text-align: center;
+	margin-right: 51px;
+	margin-bottom: 52px;
+	width: 30px;
+	height: 30px;
+	outline: none;
+}
+
+.intersection {
+	width: 20px;
+	height: 20px;
+}
+
+.grid-unit {
+	width: 80px;
+	height: 80px;
+	border: solid 1px;
+	display: inline-block;
+}
+
+#board, #gridlines {
+	position: absolute;
+}
+
+#board {
+	margin-top: 0px;
+	margin-left: -12px;
+}
+
+button.w {
+	border-radius: 50%;
+	background-color: #CCCCCC;
+	border: #CCCCCC;
+}
+
+button.b {
+	border-radius: 50%;
+	background-color: black;
+	border: black;
+}
+
+button.none {
+	border: transparent;
+	background-color: transparent;
+	outline: none;
+}
+
+#controls {
+	margin-left: 800px;
+}
+
+button.erase:active {
+	background-color: #FFB2B2
+}
