@@ -148,11 +148,11 @@ function selectRadioButton(btn) {
 	document.getElementById("radio-white").checked = true;
 }
 
-Mousetrap.bind('w', function() {document.getElementById("radio-white").checked = true;  $("#erase-toggle").trigger('change');
+Mousetrap.bind('w', function() {$("#radio-white").trigger('click');
 });
-Mousetrap.bind('b', function() {document.getElementById("radio-black").checked = true; $("#erase-toggle").trigger('change');
+Mousetrap.bind('b', function() {$("#radio-black").trigger('click');
 });
-Mousetrap.bind('c', function() {document.getElementById("radio-off").checked = true; $("#erase-toggle").trigger('change');
+Mousetrap.bind('c', function() {$("#radio-off").trigger('click');
 });
-Mousetrap.bind('e', function() {console.log('test'); var current = $("#erase-toggle").prop("checked"); document.getElementById("erase-toggle").checked = !current;    $("#erase-toggle").trigger('change');
+Mousetrap.bind('e', function() {$("#erase-toggle").trigger('click');
 });
